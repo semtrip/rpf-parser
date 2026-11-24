@@ -9,6 +9,7 @@
     "eslint": "npx eslint --cache --ext .js,.jsx,.ts,.tsx src",
     "eslint:dump": "eslint --print-config ./.eslintrc.js",
     "build": "npm run lint && npx tsc",
+    "test": "tsc && node --test tests/staging.cjs",
     "dev": "npm run build && node ./bin",
     "tree": "npm run build && node ./bin/listDlcTrees.js",
     "package": "npm run build && npx pkg ./bin/index.js --targets win --out-path ./RPF-Packager"
